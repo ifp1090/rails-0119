@@ -1,6 +1,6 @@
 class Admin::JobsController < ApplicationController
-  before_filter :authnticate_user!, only: [:new, :create, :update, :edit, :destroy]
-  brfore_filter :require_is_admin
+  before_filter :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
+  before_filter :require_is_admin
 
   def require_is_admin
     if current_user.email != 'rexhocn@gmail.com'
@@ -52,17 +52,6 @@ end
 private
 
 def job_params
-  params.require(:jobs).permit(:title, :description)
+  params.require(:job).permit(:title, :description)
 end
-end
-
-
-
-
-
-
-
-
-
-
 end

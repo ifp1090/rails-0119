@@ -14,7 +14,7 @@ def new
 end
 
   def create
-    @job = Job.find(params[:id])
+    @job = Job.new
     if @job.save
       redirect_to jobs_path
     else
