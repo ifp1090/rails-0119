@@ -43,7 +43,7 @@ end
 
   private
 def job_params
-parmas.require(:job).permit.(:title, :descritption)
+parmas.require(:job).permit.(:title, :descritption, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden)
 
 end
 end
