@@ -16,5 +16,8 @@ end
 end
 end
 
-root 'jobs#index'
+resources :welcome do
+end
+
+root 'welcome#index'
 end
